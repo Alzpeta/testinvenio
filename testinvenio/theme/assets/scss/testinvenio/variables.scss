@@ -1,0 +1,14 @@
+/*
+ *   Copyright (C) 2020 alzp.
+ *
+ * testInvenio is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+
+@import "../invenio_theme/variables";
+
+// If you want to change the primary color you can do something like:
+ $color1: rgba(251, 156, 204, 1);
+ $color1-gradient: lighten($color1, 15%);
+ $navbar-default-bg: $color1;

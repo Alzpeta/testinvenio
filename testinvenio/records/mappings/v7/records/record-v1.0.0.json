@@ -1,0 +1,89 @@
+{
+  "mappings": {
+    "date_detection": false,
+    "numeric_detection": false,
+    "properties": {
+      "$schema": {
+        "type": "text",
+        "index": false
+      },
+      "title": {
+        "type": "text",
+        "copy_to": "suggest_title"
+      },
+      "fileName": {
+        "type": "keyword"
+      },
+      "fileType": {
+        "type": "keyword"
+      },
+      "suggest_title": {
+        "type": "completion"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "dc:language": {
+      "type": "text"
+    },
+      "_oai": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "sets": {
+            "type": "keyword"
+          },
+          "updated": {
+            "type": "date"
+          }
+        }
+      },
+      "owner": {
+        "type": "integer"
+      },
+      "publication_date": {
+        "type": "date",
+        "format": "date"
+      },
+      "contributors_count": {
+        "type": "short"
+      },
+      "contributors": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "text"
+              },
+              "value": {
+                "type": "keyword"
+              }
+            }
+          },
+          "affiliations": {
+            "type": "text"
+          },
+          "role": {
+            "type": "keyword"
+          },
+          "email": {
+            "type": "text"
+          },
+          "name": {
+            "type": "text"
+          }
+        }
+      },
+      "_created": {
+        "type": "date"
+      },
+      "_updated": {
+        "type": "date"
+      }
+    }
+  }
+}

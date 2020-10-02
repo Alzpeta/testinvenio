@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://localhost/schemas/authors/author-v1.0.0.json",
+  "additionalProperties": false,
+  "title": "My site v1.0.0",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "description": "Invenio record identifier (integer).",
+      "type": "string"
+    },
+    "name": {
+      "description": "Author name.",
+      "type": "string"
+    },
+    "organization": {
+      "description": "Organization the author belongs to.",
+      "type": "string"
+    },
+    "_oai": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "OAI-PMH specific information.",
+      "properties": {
+        "id": {
+          "description": "OAI-PMH record identifier.",
+          "type": "string"
+        },
+        "sets": {
+          "description": "OAI-PMH sets for record.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "updated": {
+          "description": "Last OAI-PMH set update (ISO8601 formatted timestamp)",
+          "type": "string"
+        }
+    }
+      }
+    },
+  "required": ["id", "name", "$schema"]
+}
