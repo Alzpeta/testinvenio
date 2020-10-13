@@ -63,6 +63,7 @@ class OaiSchemaV1(BaseSchema):
     #id = PersistentIdentifier()
     id = fields.Str()
     sets = fields.List(fields.Str)
+    #sets = fields.List()
     updated = fields.Str()
 
     # @validates_schema
@@ -86,6 +87,7 @@ class MetadataSchemaV1(StrictKeysMixin):
 
     id = PersistentIdentifier()
     title = SanitizedUnicode()
+    creator = SanitizedUnicode()
     fileName = SanitizedUnicode()
     fileType = SanitizedUnicode()
     owner = fields.Integer()
@@ -104,7 +106,7 @@ class MetadataSchemaV1(StrictKeysMixin):
 
 class RecordSchemaV1(StrictKeysMixin):
     """Record schema."""
-    _oai = Nested(OaiSchemaV1)
+
     metadata = fields.Nested(MetadataSchemaV1)
     created = fields.Str(dump_only=True)
     revision = fields.Integer(dump_only=True)

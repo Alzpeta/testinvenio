@@ -43,7 +43,7 @@ class AuthorMetadataSchemaV1(StrictKeysMixin):
 
 class AuthorSchemaV1(StrictKeysMixin):
     """Author schema."""
-    _oai = Nested(OaiSchemaV1)
+    #_oai = Nested(OaiSchemaV1)
     metadata = fields.Nested(AuthorMetadataSchemaV1)
     created = fields.Str(dump_only=True)
     updated = fields.Str(dump_only=True)

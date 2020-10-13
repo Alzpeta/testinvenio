@@ -72,7 +72,7 @@
     "owner": {
       "type": "integer"
     },
-    "dc:language": {
+    "creator": {
       "type": "string"
     },
     "_oai": {
@@ -82,6 +82,7 @@
       "properties": {
         "id": {
           "description": "OAI-PMH record identifier.",
+          "index": "not_analyzed",
           "type": "string"
         },
         "sets": {

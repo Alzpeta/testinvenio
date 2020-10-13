@@ -23,8 +23,7 @@ def _(x):
 RECORDS_REST_ENDPOINTS = {
     'authid': dict(
         pid_type='authid',
-        pid_minter='authid',
-        #oai_minter = 'authid',
+        pid_minter='aminter',
         pid_fetcher='authid',
         default_endpoint_prefix=True,
         record_class=AuthorRecord,

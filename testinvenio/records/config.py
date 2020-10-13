@@ -24,7 +24,7 @@ def _(x):
 RECORDS_REST_ENDPOINTS = {
     'recid': dict(
         pid_type='recid',
-        pid_minter='recid',
+        pid_minter='rminter',
         pid_fetcher='recid',
         default_endpoint_prefix=True,
         record_class=Record,

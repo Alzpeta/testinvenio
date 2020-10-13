@@ -144,7 +144,7 @@ APP_ALLOWED_HOSTS = ['testinvenio.com', 'localhost', '127.0.0.1']
 
 # OAI-PMH
 # =======
-#OAISERVER_ID_PREFIX = 'oai:testinvenio.com:'
+OAISERVER_ID_PREFIX = 'oai:testinvenio.com:'
 
 # Previewers
 # ==========

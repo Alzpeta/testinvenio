@@ -9,7 +9,7 @@
 """Circulation minters."""
 
 from .providers import AuthorIdProvider
-from invenio_oaiserver.provider import OAIIDProvider
+from invenio_oaiserver.minters import oaiid_minter
 
 from datetime import datetime
 
@@ -26,7 +26,11 @@ def author_pid_minter(record_uuid, data):
     )
     data['id'] = provider.pid.pid_value
     return provider.pid
+def author_minter(record_uuid, data):
+    aminter = author_pid_minter(record_uuid, data)
+    oaiid_minter(record_uuid, data)
 
+    return aminter
 # def oai_pid_minter(record_uuid, data):
 #     pid_value = data.get('_oai', {}).get('id')
 #     if pid_value is None:

@@ -38,9 +38,9 @@
 			</dc:title>
 		</xsl:for-each>
 		<xsl:for-each select="marc:datafield[@tag=100]|marc:datafield[@tag=110]|marc:datafield[@tag=111]|marc:datafield[@tag=700]|marc:datafield[@tag=710]|marc:datafield[@tag=711]|marc:datafield[@tag=720]">
-			<dc:creator>
+			<creator>
 				<xsl:value-of select="."/>
-			</dc:creator>
+			</creator>
 		</xsl:for-each>
 		<dc:type>
 			<xsl:if test="$leader7='c'">
@@ -82,9 +82,10 @@
 				<xsl:value-of select="."/>
 			</dc:date>
 		</xsl:for-each>
-		<title>
+		<dc:creator>
+            jej
 			<xsl:value-of select="substring($controlField008,36,3)"/>
-		</title>
+		</dc:creator>
 		<xsl:for-each select="marc:datafield[@tag=856]/marc:subfield[@code='q']">
 			<dc:format>
 				<xsl:value-of select="."/>
@@ -96,9 +97,9 @@
 			</dc:description>
 		</xsl:for-each>
 		<xsl:for-each select="marc:datafield[@tag=521]">
-			<title>
+			<dc:description>
 				<xsl:value-of select="marc:subfield[@code='a']"/>
-			</title>
+			</dc:description>
 		</xsl:for-each>
 		<xsl:for-each select="marc:datafield[500&lt;= @tag and @tag&lt;= 599 ][not(@tag=506 or @tag=530 or @tag=540 or @tag=546)]">
 			<dc:description>

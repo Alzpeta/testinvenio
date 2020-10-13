@@ -76,7 +76,8 @@ setup(
         'authid = testinvenio.authors.fetchers:author_pid_fetcher'
         ],
         'invenio_pidstore.minters': [
-        'authid = testinvenio.authors.minters:author_pid_minter',
+        'aminter = testinvenio.authors.minters:author_minter',
+        'rminter = testinvenio.records.minters:minter'
         ],
     },
     classifiers=[

@@ -23,7 +23,7 @@
       "id": {
         "type": "keyword"
       },
-      "dc:language": {
+      "creator": {
       "type": "text"
     },
       "_oai": {
