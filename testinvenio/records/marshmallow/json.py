@@ -56,7 +56,8 @@ class PersonIdsSchemaV1(StrictKeysMixin):
     source = SanitizedUnicode()
     value = SanitizedUnicode()
 
-
+class MetaDataSchemaX(BaseSchema):
+    creator = fields.Str()
 class OaiSchemaV1(BaseSchema):
     """Resource type schema."""
     #id =  OAIIDProvider.create()
@@ -91,9 +92,11 @@ class MetadataSchemaV1(StrictKeysMixin):
     fileName = SanitizedUnicode()
     fileType = SanitizedUnicode()
     owner = fields.Integer()
+    metadata = Nested(MetaDataSchemaX)
     keywords = fields.List(SanitizedUnicode(), many=True)
     publication_date = DateString()
     contributors = Nested(ContributorSchemaV1, many=True)
+    doi = fields.Str()
     _schema = GenFunction(
         attribute="$schema",
         data_key="$schema",

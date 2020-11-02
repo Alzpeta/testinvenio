@@ -61,12 +61,12 @@ setup(
         ],
         'invenio_base.api_apps': [
             'testinvenio = testinvenio.records:testInvenio',
-            'authors = testinvenio.authors:Authors'
+            'authors = testinvenio.authors:Authors',
+            #'oarepo_actions = oarepo_actions:Actions'
         ],
         'invenio_jsonschemas.schemas': [
             'testinvenio = testinvenio.records.jsonschemas',
-            'authors = testinvenio.authors.jsonschemas'
-
+            'authors = testinvenio.authors.jsonschemas',
         ],
         'invenio_search.mappings': [
             'records = testinvenio.records.mappings',

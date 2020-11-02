@@ -90,7 +90,7 @@ class testInvenio(object):
         """Flask application initialization."""
         self.init_config(app)
         app.extensions['testinvenio'] = self
-        app_loaded.connect(oai_server)
+        #app_loaded.connect(oai_server)
         self._register_signals(app)
 
 

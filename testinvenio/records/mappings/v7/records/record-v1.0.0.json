@@ -23,8 +23,13 @@
       "id": {
         "type": "keyword"
       },
-      "creator": {
-      "type": "text"
+      "metadata": {
+      "type": "object",
+        "properties": {
+          "creator": {
+            "type": "text"
+          }
+        }
     },
       "_oai": {
         "type": "object",
@@ -46,6 +51,9 @@
       "publication_date": {
         "type": "date",
         "format": "date"
+      },
+      "doi": {
+        "type": "text"
       },
       "contributors_count": {
         "type": "short"

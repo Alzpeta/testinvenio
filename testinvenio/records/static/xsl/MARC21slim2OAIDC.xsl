@@ -83,7 +83,6 @@
 			</dc:date>
 		</xsl:for-each>
 		<dc:creator>
-            jej
 			<xsl:value-of select="substring($controlField008,36,3)"/>
 		</dc:creator>
 		<xsl:for-each select="marc:datafield[@tag=856]/marc:subfield[@code='q']">

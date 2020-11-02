@@ -10,7 +10,7 @@
 from __future__ import absolute_import, print_function
 
 from __future__ import absolute_import, print_function
-
+import oarepo_actions
 from flask import current_app
 from invenio_jsonschemas import current_jsonschemas
 from invenio_records.api import Record

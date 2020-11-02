@@ -5,11 +5,12 @@
 # oarepo-actions is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-"""oarepo-actions."""
+"""Version information for oarepo-actions.
+
+This file is imported by ``oarepo_actions.__init__``,
+and parsed by ``setup.py``.
+"""
 
 from __future__ import absolute_import, print_function
 
-from .ext import Actions
-from .version import __version__
-
-__all__ = ('__version__', 'Actions',)
+__version__ = '1.0.1'

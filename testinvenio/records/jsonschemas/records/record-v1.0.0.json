@@ -72,7 +72,15 @@
     "owner": {
       "type": "integer"
     },
-    "creator": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "creator": {
+          "type": "string"
+        }
+      }
+    },
+    "doi": {
       "type": "string"
     },
     "_oai": {
